@@ -3,6 +3,7 @@ package Helper;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -25,7 +26,7 @@ public class BaseTest {
     @BeforeMethod
     public void setup() throws InterruptedException {
         loadProperties(); // Load properties before setting up the driver
-        driver = new ChromeDriver();
+        driver = new EdgeDriver();
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
         driver.get(properties.getProperty("URL"));
         driver.manage().window().maximize();

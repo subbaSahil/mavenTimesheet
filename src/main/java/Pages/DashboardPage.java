@@ -9,7 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Helper.Interactions;
-import Utils.DashboardLocators;
+import Locators.DashboardLocators;
+
 
 public class DashboardPage {
 	WebDriverWait wait;
