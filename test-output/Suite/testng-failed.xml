@@ -7,13 +7,13 @@
         <methods>
           <include name="TC_010_Verification_of_filter_operation_on_submitted_timesheets_using_reportee_dropdown"/>
           <include name="TC_009_navigation_to_submitted_timesheet_for_approval_or_rejection"/>
+          <include name="tearDown"/>
           <include name="TC_249_Verification_of_visibility_of_consumed_hours_to_lead_from_the_date_lead_is_selected"/>
           <include name="TC_005_Verification_of_list_of_associated_clients"/>
           <include name="TC_004_toogle_switchoff"/>
           <include name="setup"/>
           <include name="TC_011_Verification_of_filter_reset_operation"/>
           <include name="TC_006_Verification_of_list_of_claimed_tasks_by_direct_reportees_"/>
-          <include name="TC_004_toogle_switchon"/>
           <include name="TC_162_Verification_of_count1"/>
           <include name="TC_007_Verification_of_claimed_task_hours_change_with_Financial_year_dropdown"/>
         </methods>

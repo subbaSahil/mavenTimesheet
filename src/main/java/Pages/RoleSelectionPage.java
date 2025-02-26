@@ -23,30 +23,25 @@ public class RoleSelectionPage {
         this.interactions = new Interactions(driver);
         this.commonlocators = new CommonLocators();
         this.loginPassword = System.getenv("PASSWORD");
-    }
-    
+    }  
     public void signIn() {
     	this.interactions.enterText(this.commonlocators.microsoftEmailField, "sahil_s@pursuitsoftware.com");
     	this.interactions.click(this.commonlocators.nextButton);
-    	this.interactions.enterText(this.commonlocators.microsoftPasswordField, "Pursuit8257988069");
+    	this.interactions.enterText(this.commonlocators.microsoftPasswordField, this.loginPassword);
     	this.interactions.click(this.commonlocators.nextButton);
     	System.out.println(this.interactions.getText(this.commonlocators.authText));
     	this.interactions.click(this.commonlocators.nextButton);
     }
-    
     public void switchToIframe() throws InterruptedException {
     	signIn();
         this.interactions.clickThreeTimes(this.commonlocators.teamsButton);
-
         if (elementIsPresent(this.commonlocators.timeSheetGeneral)) {
         	this.interactions.clickThreeTimes(this.commonlocators.timeSheetGeneral);
         } else {
         	this.interactions.clickThreeTimes(this.commonlocators.timeSheet_QA);
         	this.interactions.clickThreeTimes(this.commonlocators.timeSheetGeneral);
         }
-
         this.interactions.clickThreeTimes(this.commonlocators.timeSheetTab);
-        
         // Switch to first iframe
         switchToFrame(this.commonlocators.iframe2);
         // Switch to nested iframe
@@ -56,7 +51,6 @@ public class RoleSelectionPage {
     public void selectEditorRole() {
     	this.interactions.click(this.commonlocators.roleEditorButton);
     }
-    
     public void selectEmployeeRole() {
     	this.interactions.click(this.commonlocators.employeeRole);
     }

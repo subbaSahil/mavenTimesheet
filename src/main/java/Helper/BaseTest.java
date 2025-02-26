@@ -44,18 +44,18 @@ public class BaseTest {
     }
 
     private void loadProperties() {
-        try (FileInputStream fileInput = new FileInputStream("C:\\Users\\SahilSubba\\eclipse-workspace\\TimeSheetTesting_2\\config.properties")) {
+        try (FileInputStream fileInput = new FileInputStream("C:\\Users\\SahilSubba\\eclipse-workspace\\mavenTimesheet\\config.properties")) {
             properties.load(fileInput);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-//    @AfterMethod
-//    public void tearDown() throws InterruptedException {
-//        if (driver != null) {
-//            Thread.sleep(2000);
-//            driver.quit(); // Clean up the WebDriver after all tests
-//        }
-//    }
+    @AfterMethod
+    public void tearDown() throws InterruptedException {
+        if (driver != null) {
+            Thread.sleep(2000);
+            driver.quit(); // Clean up the WebDriver after all tests
+        }
+    }
 }
