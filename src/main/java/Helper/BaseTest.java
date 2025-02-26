@@ -35,11 +35,11 @@ public class BaseTest {
 
         RoleSelectionPage roleSelectionPage = new RoleSelectionPage(driver);
         roleSelectionPage.switchToIframe();
-//        roleSelectionPage.selectEditorRole();
+        roleSelectionPage.selectEditorRole();
 //        roleSelectionPage.selectEmployeeRole();
 //        roleSelectionPage.selectHrRole();
 //        roleSelectionPage.selectPL();
-        roleSelectionPage.select_RL();
+//        roleSelectionPage.select_RL();
 
     }
 
