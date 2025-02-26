@@ -14,16 +14,29 @@ public class RoleSelectionPage {
     private WebDriver driver;
     private WebDriverWait wait;
     private Interactions interactions;
-    private CommonLocators commonlocators;
-
+    private CommonLocators commonlocators;;
+    private String loginPassword;
+    
     public RoleSelectionPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         this.interactions = new Interactions(driver);
         this.commonlocators = new CommonLocators();
+        this.loginPassword = System.getenv("PASSWORD");
     }
-
+    
+    public void signIn() {
+    	this.interactions.enterText(this.commonlocators.microsoftEmailField, "sahil_s@pursuitsoftware.com");
+    	this.interactions.click(this.commonlocators.nextButton);
+    	System.out.println(this.loginPassword);
+    	this.interactions.enterText(this.commonlocators.microsoftPasswordField, this.loginPassword);
+    	this.interactions.click(this.commonlocators.nextButton);
+    	System.out.println(this.interactions.getText(this.commonlocators.authText));
+    	this.interactions.click(this.commonlocators.nextButton);
+    }
+    
     public void switchToIframe() throws InterruptedException {
+    	signIn();
         this.interactions.clickThreeTimes(this.commonlocators.teamsButton);
 
         if (elementIsPresent(this.commonlocators.timeSheetGeneral)) {

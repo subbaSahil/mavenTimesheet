@@ -3,6 +3,12 @@ package Locators;
 import org.openqa.selenium.By;
 
 public class CommonLocators {
+	
+	public By microsoftEmailField = By.xpath("//input[@type = 'email']");
+	public By microsoftPasswordField = By.xpath("//input[@type = 'password']");
+	public By authText = By.xpath("//div[@class=\"display-sign-container\"]/div");
+	public By nextButton = By.xpath("//input[@type = 'submit']");
+	
 	public By iframeLocator = By.id("fullscreen-app-host");
 	public By iframe2 = By.id("cacheable-iframe:a6b63365-31a4-4f43-92ec-710b71557af9");
 	public By roleEditorButton = By.xpath("//*[@id=\"publishedCanvas\"]/div/div[1]/div[3]/div/div/div[3]/div/div/div/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div/div/button");

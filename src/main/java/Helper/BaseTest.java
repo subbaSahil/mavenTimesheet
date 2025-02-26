@@ -26,7 +26,8 @@ public class BaseTest {
     @BeforeMethod
     public void setup() throws InterruptedException {
         loadProperties(); // Load properties before setting up the driver
-        driver = new EdgeDriver();
+//        driver = new EdgeDriver();
+        driver = new ChromeDriver();
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
         driver.get(properties.getProperty("URL"));
         driver.manage().window().maximize();
@@ -50,11 +51,11 @@ public class BaseTest {
         }
     }
 
-    @AfterMethod
-    public void tearDown() throws InterruptedException {
-        if (driver != null) {
-            Thread.sleep(2000);
-            driver.quit(); // Clean up the WebDriver after all tests
-        }
-    }
+//    @AfterMethod
+//    public void tearDown() throws InterruptedException {
+//        if (driver != null) {
+//            Thread.sleep(2000);
+//            driver.quit(); // Clean up the WebDriver after all tests
+//        }
+//    }
 }
