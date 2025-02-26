@@ -15,7 +15,7 @@ public class RoleSelectionPage {
     private WebDriverWait wait;
     private Interactions interactions;
     private CommonLocators commonlocators;;
-    private String loginPassword;
+    private String loginPassword = "";
     
     public RoleSelectionPage(WebDriver driver) {
         this.driver = driver;
@@ -24,10 +24,14 @@ public class RoleSelectionPage {
         this.commonlocators = new CommonLocators();
         this.loginPassword = System.getenv("PASSWORD");
     }  
-    public void signIn() {
+    
+    public String getPassword(){
+    	return this.loginPassword;
+    }
+      public void signIn() {
     	this.interactions.enterText(this.commonlocators.microsoftEmailField, "sahil_s@pursuitsoftware.com");
     	this.interactions.click(this.commonlocators.nextButton);
-    	this.interactions.enterText(this.commonlocators.microsoftPasswordField, this.loginPassword);
+    	this.interactions.enterText(this.commonlocators.microsoftPasswordField, getPassword());
     	this.interactions.click(this.commonlocators.nextButton);
     	System.out.println(this.interactions.getText(this.commonlocators.authText));
     	this.interactions.click(this.commonlocators.nextButton);
