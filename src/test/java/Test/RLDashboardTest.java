@@ -1,7 +1,7 @@
 package Test;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.testng.annotations.AfterMethod;
+
 import org.testng.annotations.Test;
 
 import Data.DashboardTabDataProvider;
