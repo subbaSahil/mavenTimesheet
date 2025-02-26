@@ -2,10 +2,8 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
 import Helper.Interactions;
-import Utils.ClientTabLocators;
+import Locators.ClientTabLocators;
 
 public class ClientsPage {
     private Interactions interactions;
