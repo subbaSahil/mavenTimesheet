@@ -1,7 +1,5 @@
 package Test;
 
-import java.util.List;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,7 +7,6 @@ import Data.ClientTabDataProvider;
 import Pages.ClientsPage;
 import Helper.BaseTest;
 import Helper.RetryAnalyzer;
-import Utils.Data;
 public class ClientTabTest extends BaseTest {
     @Test(priority = 1, dataProvider = "newClientsToAdd", dataProviderClass = ClientTabDataProvider.class,retryAnalyzer = RetryAnalyzer.class)
     public void TC_022_addClient(String clientName) throws InterruptedException {
