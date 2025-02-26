@@ -130,7 +130,7 @@ public class Interactions {
             inputField.clear();  // Clear existing text before entering new text
             inputField.sendKeys(text);
 
-            System.out.println("Text entered successfully: " + text);
+            System.out.println("Text entered successfully");
         } catch (Exception e) {
             System.err.println("Error while entering text in the element: " + element + " - " + e.getMessage());
         }

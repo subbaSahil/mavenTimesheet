@@ -28,7 +28,6 @@ public class RoleSelectionPage {
     public void signIn() {
     	this.interactions.enterText(this.commonlocators.microsoftEmailField, "sahil_s@pursuitsoftware.com");
     	this.interactions.click(this.commonlocators.nextButton);
-    	System.out.println(this.loginPassword);
     	this.interactions.enterText(this.commonlocators.microsoftPasswordField, this.loginPassword);
     	this.interactions.click(this.commonlocators.nextButton);
     	System.out.println(this.interactions.getText(this.commonlocators.authText));
